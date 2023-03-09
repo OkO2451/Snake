@@ -3,6 +3,11 @@ import java.awt.*;
 
 public class Window extends JFrame implements Runnable {
     public boolean isRunning ;
+    public static Scene currentScene;
+    public static int currentState;
+
+    public static Kl keyListener = new Kl();
+
     public Window(int width, int height, String title) {
         super(title);
         setSize(width, height);
@@ -12,6 +17,28 @@ public class Window extends JFrame implements Runnable {
         setVisible(true);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         isRunning = true;
+        addKeyListener(keyListener);
+
+        Window.changeScene(0);
+    }
+    public void start(){
+        new Thread(this).start();
+    }
+    // scene builder
+
+    public static void changeScene(int newState){
+        Window.currentState = newState;
+        switch (Window.currentState){
+            case 0:
+                Window.currentScene = new MainMenuScene(Window.keyListener);
+                break;
+            case 1:
+                Window.currentScene = new GameScene(Window.keyListener);
+                break;
+            default:
+                Window.currentScene = new MainMenuScene(Window.keyListener);
+                break;
+        }
     }
 
     public void update(double dt) {
@@ -19,11 +46,11 @@ public class Window extends JFrame implements Runnable {
         Graphics dbg = dbImage.getGraphics();
         this.draw(dbg);
         getGraphics().drawImage(dbImage, 0, 0, this);
+        Window.currentScene.update(dt);
     }
     public void draw(Graphics g){
         Graphics2D g2 = (Graphics2D) g;
-        g2.setColor(Color.GREEN);
-        g2.fillRect(0, 0, getWidth(), getHeight());
+        Window.currentScene.draw(g);
     }
     @Override
     public void run() {
