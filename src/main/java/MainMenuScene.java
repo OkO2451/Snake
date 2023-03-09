@@ -1,13 +1,33 @@
-import java.awt.Graphics;
-import java.awt.Color;
+import javax.imageio.ImageIO;
+import java.awt.*;
 import java.awt.event.KeyEvent;
+import java.awt.image.BufferedImage;
+import java.io.File;
 
 
 public class MainMenuScene extends Scene {
 
     public Kl keyListener = new Kl();
+    public BufferedImage title, play, playPressed, exit, exitPressed;
+    public static Rect startRect, exitRect, titleRect;
+
     public MainMenuScene(Kl keyListener) {
         this.keyListener = keyListener;
+        try{
+            BufferedImage spritesheet = ImageIO.read( new File("Assets/menuSprite.png"));
+            title = spritesheet.getSubimage(0, 242, 960, 240);
+            play = spritesheet.getSubimage(0, 121, 261, 121);
+            playPressed = spritesheet.getSubimage(264 , 121, 261, 121);
+            exit = spritesheet.getSubimage(0, 0, 233, 93);
+            exitPressed = spritesheet.getSubimage(264, 0, 233, 93);
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        startRect = new Rect(310, 280, 150,70);
+        exitRect = new Rect(318, 355, 130,55);
+        titleRect = new Rect(240, 100, 300,100);
+
     }
     public void update(double dt) {
         if(keyListener.isPressed(KeyEvent.VK_UP)){
@@ -20,6 +40,11 @@ public class MainMenuScene extends Scene {
     public void draw(Graphics g) {
         g.setColor(Color.RED);
         g.fillRect(0, 0, Constants.WIDTH, Constants.HEIGHT);
+        g.drawImage(title, (int) titleRect.x, (int) titleRect.y, (int) titleRect.w, (int) titleRect.h, null);
+        g.drawImage(play, (int) startRect.x, (int) startRect.y, (int) startRect.w, (int) startRect.h, null);
+        g.drawImage(exit, (int) exitRect.x, (int) exitRect.y, (int) exitRect.w, (int) exitRect.h, null);
+
+
     }
 }
 

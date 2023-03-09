@@ -20,6 +20,7 @@ public class Window extends JFrame implements Runnable {
         addKeyListener(keyListener);
 
         Window.changeScene(0);
+
     }
     public void start(){
         new Thread(this).start();
