@@ -3,9 +3,11 @@ import java.awt.Color;
 import java.awt.event.KeyEvent;
 
 public class GameScene extends Scene{
-    public Kl keyListener = new Kl();
-    public GameScene(Kl keyListener) {
+    public Kl keyListener ;
+    public Ml mouseListener;
+    public GameScene(Kl keyListener, Ml mouseListener) {
         this.keyListener = keyListener;
+        this.mouseListener = mouseListener;
     }
     public void update(double dt) {
         if(keyListener.isPressed(KeyEvent.VK_UP)){

@@ -9,4 +9,8 @@ public class Rect {
     public boolean intersects(Rect other) {
         return x < other.x + other.w && x + w > other.x && y < other.y + other.h && y + h > other.y;
     }
+
+    public boolean contains(double x, double y) {
+        return x >= this.x && x <= this.x + w && y >= this.y && y <= this.y + h;
+    }
 }

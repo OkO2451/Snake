@@ -5,7 +5,7 @@ public class Window extends JFrame implements Runnable {
     public boolean isRunning ;
     public static Scene currentScene;
     public static int currentState;
-
+    public static Ml mouseListener = new Ml();
     public static Kl keyListener = new Kl();
 
     public Window(int width, int height, String title) {
@@ -18,6 +18,7 @@ public class Window extends JFrame implements Runnable {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         isRunning = true;
         addKeyListener(keyListener);
+        addMouseListener(mouseListener);
 
         Window.changeScene(0);
 
@@ -31,13 +32,13 @@ public class Window extends JFrame implements Runnable {
         Window.currentState = newState;
         switch (Window.currentState){
             case 0:
-                Window.currentScene = new MainMenuScene(Window.keyListener);
+                Window.currentScene = new MainMenuScene(Window.keyListener, Window.mouseListener);
                 break;
             case 1:
-                Window.currentScene = new GameScene(Window.keyListener);
+                Window.currentScene = new GameScene(Window.keyListener, Window.mouseListener);
                 break;
             default:
-                Window.currentScene = new MainMenuScene(Window.keyListener);
+                Window.currentScene = new MainMenuScene(Window.keyListener, Window.mouseListener);
                 break;
         }
     }
