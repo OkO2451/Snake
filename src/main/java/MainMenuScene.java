@@ -41,17 +41,26 @@ public class MainMenuScene extends Scene {
         } else if (keyListener.isPressed(KeyEvent.VK_SPACE)) {
             Window.changeScene(1);
         }
-
-        if (mouseListener.isPressed()) {
-            if (startRect.contains(mouseListener.x, mouseListener.y)) {
-                playCurrent = playPressed;
-            } else if (exitRect.contains(mouseListener.x, mouseListener.y)) {
-                exitCurrent = exitPressed;
+        if(startRect.contains(mouseListener.x, mouseListener.y)){
+            playCurrent = playPressed;
+            if(mouseListener.isPressed()){
+                Window.changeScene(1);
             }
-        } else {
+        }else {
             playCurrent = play;
+        }
+        if(exitRect.contains(mouseListener.x, mouseListener.y)){
+            exitCurrent = exitPressed;
+            if(mouseListener.isPressed()){
+                System.exit(0);
+            }
+        }else {
             exitCurrent = exit;
         }
+
+
+
+
 
     }
     public void draw(Graphics g) {

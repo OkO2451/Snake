@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68d0432e-3ce0-4b17-aae7-7042ffd3f028" name="Changes" comment="added keys&#10;&#10;kl class that listens to keys using a hashmap for the ascii 128 characters and changes the scene based on which key is being clicked">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Rect.java" afterDir="false" />
+    <list default="true" id="68d0432e-3ce0-4b17-aae7-7042ffd3f028" name="Changes" comment="Menu elements added&#10;&#10;they are clikable &#10;no functions tho">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/MainMenuScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainMenuScene.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Window.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +27,19 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="26ad2781-bb04-412c-acb5-24b95cf55e30" />
+        <option name="url" value="https://github.com/OkO2451/Snake.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -76,7 +87,7 @@
       <updated>1678376290466</updated>
       <workItem from="1678376291802" duration="1587000" />
       <workItem from="1678384008149" duration="8910000" />
-      <workItem from="1678403927955" duration="1813000" />
+      <workItem from="1678403927955" duration="3446000" />
     </task>
     <task id="LOCAL-00001" summary="lkhmis">
       <created>1678385185705</created>
@@ -92,7 +103,21 @@
       <option name="project" value="LOCAL" />
       <updated>1678390733810</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Menu elements added&#10;&#10;they arent clikable yet">
+      <created>1678405774048</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1678405774048</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Menu elements added&#10;&#10;they are clikable &#10;no functions tho">
+      <created>1678406935405</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1678406935405</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -102,6 +127,8 @@
     <MESSAGE value="lkhmis" />
     <MESSAGE value="added keys&#10;&#10;kl class that listens to keys using" />
     <MESSAGE value="added keys&#10;&#10;kl class that listens to keys using a hashmap for the ascii 128 characters and changes the scene based on which key is being clicked" />
-    <option name="LAST_COMMIT_MESSAGE" value="added keys&#10;&#10;kl class that listens to keys using a hashmap for the ascii 128 characters and changes the scene based on which key is being clicked" />
+    <MESSAGE value="Menu elements added&#10;&#10;they arent clikable yet" />
+    <MESSAGE value="Menu elements added&#10;&#10;they are clikable &#10;no functions tho" />
+    <option name="LAST_COMMIT_MESSAGE" value="Menu elements added&#10;&#10;they are clikable &#10;no functions tho" />
   </component>
 </project>
