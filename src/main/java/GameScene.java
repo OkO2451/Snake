@@ -3,7 +3,7 @@ import java.awt.event.KeyEvent;
 import java.awt.geom.Rectangle2D;
 
 public class GameScene extends Scene{
-
+    public Snake snake;
     Rect foreground, background;
     public Kl keyListener ;
     public Ml mouseListener;
@@ -12,6 +12,7 @@ public class GameScene extends Scene{
         this.mouseListener = mouseListener;
         background = new Rect(0, 0, Constants.WIDTH, Constants.HEIGHT);
         foreground = new Rect(24,48, 24*31, 24*22);
+        snake = new Snake( 20, 48,48+24,24,24,background);
     }
     public void update(double dt) {
         if(keyListener.isPressed(KeyEvent.VK_UP)){
@@ -19,6 +20,7 @@ public class GameScene extends Scene{
         } else if (keyListener.isPressed(KeyEvent.VK_SPACE)) {
             Window.changeScene(1);
         }
+
     }
     public void draw(Graphics g) {
         Graphics2D g2d = (Graphics2D) g;
@@ -27,6 +29,6 @@ public class GameScene extends Scene{
 
         g2d.setColor(Color.BLUE);
         g2d.fill(new Rectangle2D.Double(foreground.x, foreground.y, foreground.w, foreground.h));
-
+        snake.draw(g2d);
     }
 }
