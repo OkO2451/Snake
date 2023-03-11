@@ -43,17 +43,17 @@ public class MainMenuScene extends Scene {
         // possible values of MouseEvent e are getX() and getY()
         // you can use the getX() and getY() methods to get the x and y coordinates
         // of the mouse
-        
 
 
-        if(keyListener.isPressed(KeyEvent.VK_UP)){
+
+        if(keyListener.isPressed(KeyEvent.VK_2)){
             Window.changeScene(0);
-        } else if (keyListener.isPressed(KeyEvent.VK_SPACE)) {
+        } else if (keyListener.isPressed(KeyEvent.VK_1)) {
             Window.changeScene(1);
         }
         if(startRect.contains(mouseListener.getX(), mouseListener.getY())){
             playCurrent = playPressed;
-            System.out.println("its in play");
+
             if(mouseListener.isPressed()){
                 Window.changeScene(1);
             }
@@ -62,7 +62,7 @@ public class MainMenuScene extends Scene {
         }
         if(exitRect.contains(mouseListener.getX(), mouseListener.getY())){
             exitCurrent = exitPressed;
-            System.out.println("its in exit");
+
             if(mouseListener.isPressed()){
                 Window.close();
             }

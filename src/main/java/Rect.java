@@ -6,6 +6,9 @@ public class Rect {
         this.w = w;
         this.h = h;
     }
+    public Rect() {
+        this(0, 0, 0, 0);
+    }
     public boolean intersects(Rect other) {
         return x < other.x + other.w && x + w > other.x && y < other.y + other.h && y + h > other.y;
     }

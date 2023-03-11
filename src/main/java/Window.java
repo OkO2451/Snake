@@ -7,7 +7,7 @@ public class Window extends JFrame implements Runnable {
     private static Scene currentScene;
     private static int currentState;
     private static Ml mouseListener = new Ml();
-    private static Kl keyListener = new Kl();
+    static Kl keyListener = new Kl();
 
     private Window(int width, int height, String title) {
         super(title);

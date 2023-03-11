@@ -15,19 +15,29 @@ public class GameScene extends Scene{
         snake = new Snake( 20, 48,48+24,24,24,background);
     }
     public void update(double dt) {
-        if(keyListener.isPressed(KeyEvent.VK_UP)){
+        if(keyListener.isPressed(KeyEvent.VK_2)){
             Window.changeScene(0);
-        } else if (keyListener.isPressed(KeyEvent.VK_SPACE)) {
+        } else if (keyListener.isPressed(KeyEvent.VK_1)) {
             Window.changeScene(1);
         }
+        if (Window.keyListener.isPressed(KeyEvent.VK_UP)) {
+            snake.changeDirection(Direction.UP);
+        } else if (Window.keyListener.isPressed(KeyEvent.VK_DOWN)) {
+            snake.changeDirection(Direction.DOWN);
+        } else if (Window.keyListener.isPressed(KeyEvent.VK_LEFT)) {
+            snake.changeDirection(Direction.LEFT);
+        } else if (Window.keyListener.isPressed(KeyEvent.VK_RIGHT)) {
+            snake.changeDirection(Direction.RIGHT);
+        }
+        snake.update(dt);
 
     }
     public void draw(Graphics g) {
         Graphics2D g2d = (Graphics2D) g;
-        g2d.setColor(Color.GREEN);
+        g2d.setColor(Color.BLACK);
         g2d.fill(new Rectangle2D.Double(background.x, background.y, background.w, background.h));
 
-        g2d.setColor(Color.BLUE);
+        g2d.setColor(Color.WHITE);
         g2d.fill(new Rectangle2D.Double(foreground.x, foreground.y, foreground.w, foreground.h));
         snake.draw(g2d);
     }
