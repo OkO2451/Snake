@@ -1,12 +1,12 @@
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.event.KeyEvent;
-import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
 import java.io.File;
 
 
 public class MainMenuScene extends Scene {
+
 
     public Kl keyListener ;
     public Ml mouseListener ;
@@ -35,24 +35,36 @@ public class MainMenuScene extends Scene {
         exitCurrent = exit;
 
     }
+
+
     public void update(double dt) {
+        // java code to update the mouse coordinates using the mouse listener
+        // and the mouseMoved method that takes in a MouseEvent e
+        // possible values of MouseEvent e are getX() and getY()
+        // you can use the getX() and getY() methods to get the x and y coordinates
+        // of the mouse
+        
+
+
         if(keyListener.isPressed(KeyEvent.VK_UP)){
             Window.changeScene(0);
         } else if (keyListener.isPressed(KeyEvent.VK_SPACE)) {
             Window.changeScene(1);
         }
-        if(startRect.contains(mouseListener.x, mouseListener.y)){
+        if(startRect.contains(mouseListener.getX(), mouseListener.getY())){
             playCurrent = playPressed;
+            System.out.println("its in play");
             if(mouseListener.isPressed()){
                 Window.changeScene(1);
             }
         }else {
             playCurrent = play;
         }
-        if(exitRect.contains(mouseListener.x, mouseListener.y)){
+        if(exitRect.contains(mouseListener.getX(), mouseListener.getY())){
             exitCurrent = exitPressed;
+            System.out.println("its in exit");
             if(mouseListener.isPressed()){
-                System.exit(0);
+                Window.close();
             }
         }else {
             exitCurrent = exit;

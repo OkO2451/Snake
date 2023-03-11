@@ -11,6 +11,6 @@ public class Rect {
     }
 
     public boolean contains(double x, double y) {
-        return x >= this.x && x <= this.x + w && y >= this.y && y <= this.y + h;
+        return x >= this.x && x <= this.x + this.w && y >= this.y && y <= this.y + this.h;
     }
 }

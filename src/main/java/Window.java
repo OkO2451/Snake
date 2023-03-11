@@ -2,13 +2,14 @@ import javax.swing.*;
 import java.awt.*;
 
 public class Window extends JFrame implements Runnable {
-    public boolean isRunning ;
-    public static Scene currentScene;
-    public static int currentState;
-    public static Ml mouseListener = new Ml();
-    public static Kl keyListener = new Kl();
+    private static boolean isRunning = true;
+    private static Window window = null;
+    private static Scene currentScene;
+    private static int currentState;
+    private static Ml mouseListener = new Ml();
+    private static Kl keyListener = new Kl();
 
-    public Window(int width, int height, String title) {
+    private Window(int width, int height, String title) {
         super(title);
         setSize(width, height);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -16,44 +17,52 @@ public class Window extends JFrame implements Runnable {
         setResizable(false);
         setVisible(true);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        isRunning = true;
         addKeyListener(keyListener);
         addMouseListener(mouseListener);
 
-        Window.changeScene(0);
+        changeScene(0);
+    }
 
+    public static synchronized Window getInstance() {
+        if (window == null) {
+            window = new Window(Constants.WIDTH, Constants.HEIGHT, "Game");
+        }
+        return window;
     }
-    public void start(){
-        new Thread(this).start();
-    }
-    // scene builder
 
     public static void changeScene(int newState){
-        Window.currentState = newState;
-        switch (Window.currentState){
+        currentState = newState;
+        switch (currentState){
             case 0:
-                Window.currentScene = new MainMenuScene(Window.keyListener, Window.mouseListener);
+                currentScene = new MainMenuScene(keyListener, mouseListener);
                 break;
             case 1:
-                Window.currentScene = new GameScene(Window.keyListener, Window.mouseListener);
+                currentScene = new GameScene(keyListener, mouseListener);
                 break;
             default:
-                Window.currentScene = new MainMenuScene(Window.keyListener, Window.mouseListener);
+                currentScene = new MainMenuScene(keyListener, mouseListener);
                 break;
         }
     }
 
-    public void update(double dt) {
+    public static void close() {
+        isRunning = false;
+    }
+
+    public  void update(double dt) {
+        currentScene.update(dt);
         Image dbImage = createImage(getWidth(), getHeight());
         Graphics dbg = dbImage.getGraphics();
-        this.draw(dbg);
+        draw(dbg);
         getGraphics().drawImage(dbImage, 0, 0, this);
-        Window.currentScene.update(dt);
+
     }
-    public void draw(Graphics g){
+
+    public static void draw(Graphics g){
         Graphics2D g2 = (Graphics2D) g;
-        Window.currentScene.draw(g);
+        currentScene.draw(g);
     }
+
     @Override
     public void run() {
         double lastFrameTime = 0.0;
@@ -68,5 +77,6 @@ public class Window extends JFrame implements Runnable {
                 e.printStackTrace();
             }
         }
+        this.dispose();
     }
 }
