@@ -5,14 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="68d0432e-3ce0-4b17-aae7-7042ffd3f028" name="Changes" comment="Added the snake&#10;&#10;now move it">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Direction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/RectS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/GameScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GameScene.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MainMenuScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainMenuScene.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Rect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Rect.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Snake.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Snake.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Window.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,6 +90,7 @@
       <workItem from="1678384008149" duration="8910000" />
       <workItem from="1678403927955" duration="3446000" />
       <workItem from="1678543412659" duration="16908000" />
+      <workItem from="1678569991689" duration="4944000" />
     </task>
     <task id="LOCAL-00001" summary="lkhmis">
       <created>1678385185705</created>

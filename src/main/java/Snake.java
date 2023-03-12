@@ -16,6 +16,7 @@ public class Snake {
 
 
     public Rect background;
+    public Rect foreground;
 
     public void update(double dt) {
             if (waitTime > 0) {
@@ -51,7 +52,16 @@ public class Snake {
                 break;
         }
 
-
+        if (newX < foreground.x) {
+            newX = foreground.x + foreground.w - bodyWidth;
+        } else if (newX + bodyWidth > foreground.x + foreground.w) {
+            newX = foreground.x;
+        }
+        if(newY < foreground.y) {
+            newY = foreground.y + foreground.h - bodyHeight;
+        } else if (newY + bodyHeight > foreground.y + foreground.h) {
+            newY = foreground.y;
+        }
 
     body[(head + 1) % body.length] = body[tail];
     body[tail] = null;
@@ -66,7 +76,7 @@ public class Snake {
 
     }
 
-    public Snake(int size, double startX, double startY, double bodyWidth, double bodyHeight, Rect background) {
+    public Snake(int size, double startX, double startY, double bodyWidth, double bodyHeight, Rect background, Rect foreground) {
         if (size > 30 || size < 0) {
             this.size = 20;
         }else{
@@ -75,6 +85,7 @@ public class Snake {
         this.bodyWidth = bodyWidth;
         this.bodyHeight = bodyHeight;
         this.background = background;
+        this.foreground = foreground;
 
         for (int i=0; i <= size; i++) {
             Rect bodyPiece = new Rect(startX + i * bodyWidth, startY, bodyWidth, bodyHeight);
@@ -83,6 +94,8 @@ public class Snake {
         }
         head--;
     }
+
+
 
     public void draw(Graphics2D g2) {
 

@@ -12,7 +12,7 @@ public class GameScene extends Scene{
         this.mouseListener = mouseListener;
         background = new Rect(0, 0, Constants.WIDTH, Constants.HEIGHT);
         foreground = new Rect(24,48, 24*31, 24*22);
-        snake = new Snake( 20, 48,48+24,24,24,background);
+        snake = new Snake( 20, 48,48+24,24,24,background,foreground);
     }
     public void update(double dt) {
         if(keyListener.isPressed(KeyEvent.VK_2)){
