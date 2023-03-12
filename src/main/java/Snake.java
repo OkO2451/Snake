@@ -110,17 +110,15 @@ public class Snake {
 
         double subWidth = (body[head].w - 6.0) / 2.0;
         double subHeight = (body[head].h - 6.0) / 2.0;
-        for (int i = tail; i != head; i = (i + 1) % body.length) {
+        int i = tail;
+        while (i != head){
             Rect piece = body[i];
-
-
-
             g2.setColor(Color.BLACK);
             g2.fill(new Rectangle2D.Double(piece.x + 2.0, piece.y + 2.0, subWidth, subHeight));
             g2.fill(new Rectangle2D.Double(piece.x + 4.0 + subWidth, piece.y + 2.0, subWidth, subHeight));
             g2.fill(new Rectangle2D.Double(piece.x + 2.0, piece.y + 4.0 + subHeight, subWidth, subHeight));
             g2.fill(new Rectangle2D.Double(piece.x + 4.0 + subWidth, piece.y + 4.0 + subHeight, subWidth, subHeight));
-
+            i = (i + 1) % body.length;
         }
         g2.setColor(Color.RED);
         g2.fill(new Rectangle2D.Double(body[head].x + 2.0, body[head].y + 2.0, subWidth, subHeight));
