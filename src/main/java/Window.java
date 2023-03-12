@@ -39,6 +39,9 @@ public class Window extends JFrame implements Runnable {
             case 1:
                 currentScene = new GameScene(keyListener, mouseListener);
                 break;
+            case 2:
+                currentScene = new LoseScene(keyListener,mouseListener);
+                break;
             default:
                 currentScene = new MainMenuScene(keyListener, mouseListener);
                 break;

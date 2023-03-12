@@ -14,6 +14,10 @@ public class MainMenuScene extends Scene {
     public static Rect startRect, exitRect, titleRect;
     public BufferedImage playCurrent, exitCurrent;
 
+    public MainMenuScene(){
+
+    }
+
     public MainMenuScene(Kl keyListener,Ml mouseListener) {
         this.keyListener = keyListener;
         this.mouseListener = mouseListener;
@@ -45,11 +49,13 @@ public class MainMenuScene extends Scene {
         // of the mouse
 
 
-
+        // 1 & 2 to change between menu and game
         if(keyListener.isPressed(KeyEvent.VK_2)){
             Window.changeScene(0);
         } else if (keyListener.isPressed(KeyEvent.VK_1)) {
             Window.changeScene(1);
+        } else if (keyListener.isPressed(KeyEvent.VK_3)) {
+            Window.changeScene(2);
         }
         if(startRect.contains(mouseListener.getX(), mouseListener.getY())){
             playCurrent = playPressed;
@@ -76,7 +82,7 @@ public class MainMenuScene extends Scene {
 
     }
     public void draw(Graphics g) {
-        g.setColor(Color.RED);
+        g.setColor(Color.BLACK);
         g.fillRect(0, 0, Constants.WIDTH, Constants.HEIGHT);
         g.drawImage(title, (int) titleRect.x, (int) titleRect.y, (int) titleRect.w, (int) titleRect.h, null);
         g.drawImage(playCurrent, (int) startRect.x, (int) startRect.y, (int) startRect.w, (int) startRect.h, null);

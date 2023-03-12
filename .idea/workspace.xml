@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68d0432e-3ce0-4b17-aae7-7042ffd3f028" name="Changes" comment="Added the snake&#10;&#10;now move it">
-      <change beforePath="$PROJECT_DIR$/src/main/java/GameScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GameScene.java" afterDir="false" />
+    <list default="true" id="68d0432e-3ce0-4b17-aae7-7042ffd3f028" name="Changes" comment="it moves and there are relaplses whe she gets out of the border&#10;&#10;TODO:&#10; - death screen&#10; - collisions&#10; - win screen&#10; - fruits&#10; - score tracker&#10; - online">
+      <change afterPath="$PROJECT_DIR$/src/main/java/LoseScene.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MainMenuScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainMenuScene.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Snake.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Snake.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Window.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,6 +94,8 @@
       <workItem from="1678403927955" duration="3446000" />
       <workItem from="1678543412659" duration="16908000" />
       <workItem from="1678569991689" duration="4944000" />
+      <workItem from="1678612312899" duration="1361000" />
+      <workItem from="1678639759569" duration="2866000" />
     </task>
     <task id="LOCAL-00001" summary="lkhmis">
       <created>1678385185705</created>
@@ -141,7 +146,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678556889438</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="it moves and there are relaplses whe she gets out of the border&#10;&#10;TODO:&#10; - death screen&#10; - collisions&#10; - win screen&#10; - fruits&#10; - score tracker&#10; - online">
+      <created>1678612749390</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1678612749390</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,6 +168,7 @@
     <MESSAGE value="Menu elements added using a singleton design pattern&#10;&#10;it works here :)&#10;TODO get the gamescene good" />
     <MESSAGE value="Added backgound and foreground&#10;&#10;todo get the snakc" />
     <MESSAGE value="Added the snake&#10;&#10;now move it" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added the snake&#10;&#10;now move it" />
+    <MESSAGE value="it moves and there are relaplses whe she gets out of the border&#10;&#10;TODO:&#10; - death screen&#10; - collisions&#10; - win screen&#10; - fruits&#10; - score tracker&#10; - online" />
+    <option name="LAST_COMMIT_MESSAGE" value="it moves and there are relaplses whe she gets out of the border&#10;&#10;TODO:&#10; - death screen&#10; - collisions&#10; - win screen&#10; - fruits&#10; - score tracker&#10; - online" />
   </component>
 </project>
