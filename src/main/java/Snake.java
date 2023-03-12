@@ -63,14 +63,15 @@ public class Snake {
             newY = foreground.y;
         }
 
-    body[(head + 1) % body.length] = body[tail];
-    body[tail] = null;
-    head = (head + 1) % body.length;
-    tail = (tail + 1) % body.length;
+        body[(head + 1) % body.length] = body[tail];
+        body[tail] = null;
+        head = (head + 1) % body.length;
+        tail = (tail + 1) % body.length;
 
-    body[head].x = newX;
-    body[head].y = newY;
-}
+        body[head].x = newX;
+        body[head].y = newY;
+
+    }
     public void changeDirection(Direction direction) {
         this.direction = direction;
 

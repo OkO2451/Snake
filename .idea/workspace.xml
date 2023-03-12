@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68d0432e-3ce0-4b17-aae7-7042ffd3f028" name="Changes" comment="it moves and there are relaplses whe she gets out of the border&#10;&#10;TODO:&#10; - death screen&#10; - collisions&#10; - win screen&#10; - fruits&#10; - score tracker&#10; - online">
-      <change afterPath="$PROJECT_DIR$/src/main/java/LoseScene.java" afterDir="false" />
+    <list default="true" id="68d0432e-3ce0-4b17-aae7-7042ffd3f028" name="Changes" comment="added death screen&#10;&#10;TODO:&#10; - collisions&#10; - fruits&#10; - score tracker&#10; - growing&#10; - online">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MainMenuScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainMenuScene.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Rect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Rect.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Snake.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Snake.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Window.java" afterDir="false" />
     </list>
@@ -95,7 +94,7 @@
       <workItem from="1678543412659" duration="16908000" />
       <workItem from="1678569991689" duration="4944000" />
       <workItem from="1678612312899" duration="1361000" />
-      <workItem from="1678639759569" duration="2866000" />
+      <workItem from="1678639759569" duration="4457000" />
     </task>
     <task id="LOCAL-00001" summary="lkhmis">
       <created>1678385185705</created>
@@ -153,7 +152,21 @@
       <option name="project" value="LOCAL" />
       <updated>1678612749390</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="added win screen&#10;&#10;TODO:&#10; - death screen&#10; - collisions&#10; - fruits&#10; - score tracker&#10; - online">
+      <created>1678642681469</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1678642681469</updated>
+    </task>
+    <task id="LOCAL-00010" summary="added death screen&#10;&#10;TODO:&#10; - collisions&#10; - fruits&#10; - score tracker&#10; - growing&#10; - online">
+      <created>1678643296507</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1678643296507</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -169,6 +182,8 @@
     <MESSAGE value="Added backgound and foreground&#10;&#10;todo get the snakc" />
     <MESSAGE value="Added the snake&#10;&#10;now move it" />
     <MESSAGE value="it moves and there are relaplses whe she gets out of the border&#10;&#10;TODO:&#10; - death screen&#10; - collisions&#10; - win screen&#10; - fruits&#10; - score tracker&#10; - online" />
-    <option name="LAST_COMMIT_MESSAGE" value="it moves and there are relaplses whe she gets out of the border&#10;&#10;TODO:&#10; - death screen&#10; - collisions&#10; - win screen&#10; - fruits&#10; - score tracker&#10; - online" />
+    <MESSAGE value="added win screen&#10;&#10;TODO:&#10; - death screen&#10; - collisions&#10; - fruits&#10; - score tracker&#10; - online" />
+    <MESSAGE value="added death screen&#10;&#10;TODO:&#10; - collisions&#10; - fruits&#10; - score tracker&#10; - growing&#10; - online" />
+    <option name="LAST_COMMIT_MESSAGE" value="added death screen&#10;&#10;TODO:&#10; - collisions&#10; - fruits&#10; - score tracker&#10; - growing&#10; - online" />
   </component>
 </project>

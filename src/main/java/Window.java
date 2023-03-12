@@ -33,7 +33,7 @@ public class Window extends JFrame implements Runnable {
     public static void changeScene(int newState){
         currentState = newState;
         switch (currentState){
-            case 0:
+            case 4:
                 currentScene = new MainMenuScene(keyListener, mouseListener);
                 break;
             case 1:
@@ -41,6 +41,9 @@ public class Window extends JFrame implements Runnable {
                 break;
             case 2:
                 currentScene = new LoseScene(keyListener,mouseListener);
+                break;
+            case 3:
+                currentScene = new WinScene(keyListener,mouseListener);
                 break;
             default:
                 currentScene = new MainMenuScene(keyListener, mouseListener);
