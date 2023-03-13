@@ -80,6 +80,35 @@ public class Snake {
         }
 
     }
+
+
+    public void grow() {
+
+        double newX = 0;
+        double newY = 0;
+
+        if (direction == Direction.RIGHT) {
+            newX = body[tail].x - bodyWidth;
+            newY = body[tail].y;
+        } else if (direction == Direction.LEFT) {
+            newX = body[tail].x + bodyWidth;
+            newY = body[tail].y;
+        } else if (direction == Direction.UP) {
+            newX = body[tail].x;
+            newY = body[tail].y + bodyHeight;
+        } else if (direction == Direction.DOWN) {
+            newX = body[tail].x;
+            newY = body[tail].y - bodyHeight;
+        }
+
+        Rect newBodyPiece = new Rect(newX, newY, bodyWidth, bodyHeight);
+
+        tail = (tail - 1) % body.length;
+        body[tail] = newBodyPiece;
+
+
+
+    }
     public void changeDirection(Direction direction) {
         this.direction = direction;
 

@@ -3,6 +3,7 @@ import java.awt.event.KeyEvent;
 import java.awt.geom.Rectangle2D;
 
 public class GameScene extends Scene{
+    int score ;
     public Snake snake;
     public Fruit fruit;
     Rect foreground, background;
@@ -13,7 +14,8 @@ public class GameScene extends Scene{
         this.mouseListener = mouseListener;
         background = new Rect(0, 0, Constants.WIDTH, Constants.HEIGHT);
         foreground = new Rect(24,48, 24*31, 24*22);
-        snake = new Snake( 3, 48,48+24,24,24,background,foreground);
+        score = 0;
+        snake = new Snake( score , 48,48+24,24,24,background,foreground);
         fruit = new Fruit();
     }
     public void update(double dt) {
@@ -38,7 +40,9 @@ public class GameScene extends Scene{
         }
 
         if (snake.body[snake.head].contains(fruit.rect) || snake.body[snake.tail].contains(fruit.rect.x + 24, fruit.rect.y + 24)) {
-            // snake.grow();
+            snake.grow();
+            score++;
+
             fruit.spawn();
         }
 
