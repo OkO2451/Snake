@@ -13,7 +13,7 @@ public class GameScene extends Scene{
         this.mouseListener = mouseListener;
         background = new Rect(0, 0, Constants.WIDTH, Constants.HEIGHT);
         foreground = new Rect(24,48, 24*31, 24*22);
-        snake = new Snake( 20, 48,48+24,24,24,background,foreground);
+        snake = new Snake( 3, 48,48+24,24,24,background,foreground);
         fruit = new Fruit();
     }
     public void update(double dt) {
@@ -23,16 +23,21 @@ public class GameScene extends Scene{
             Window.changeScene(1);
         }
         if (Window.keyListener.isPressed(KeyEvent.VK_UP)) {
-            snake.changeDirection(Direction.UP);
+            if(snake.direction != Direction.DOWN)
+                snake.changeDirection(Direction.UP);
         } else if (Window.keyListener.isPressed(KeyEvent.VK_DOWN)) {
-            snake.changeDirection(Direction.DOWN);
+            if(snake.direction != Direction.UP)
+                snake.changeDirection(Direction.DOWN);
+
         } else if (Window.keyListener.isPressed(KeyEvent.VK_LEFT)) {
-            snake.changeDirection(Direction.LEFT);
+            if(snake.direction != Direction.RIGHT)
+                snake.changeDirection(Direction.LEFT);
         } else if (Window.keyListener.isPressed(KeyEvent.VK_RIGHT)) {
-            snake.changeDirection(Direction.RIGHT);
+            if(snake.direction != Direction.LEFT)
+                snake.changeDirection(Direction.RIGHT);
         }
 
-        if (snake.body[snake.head].x <= fruit.rect.x && snake.body[snake.head].y <= fruit.rect.y + fruit.rect.h && snake.body[snake.head].y + snake.body[snake.head].h >= fruit.rect.y) {
+        if (snake.body[snake.head].contains(fruit.rect) || snake.body[snake.tail].contains(fruit.rect.x + 24, fruit.rect.y + 24)) {
             // snake.grow();
             fruit.spawn();
         }

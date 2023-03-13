@@ -17,14 +17,14 @@ public class Fruit {
         spawn();
     }
     public void spawn() {
-        rect.x = (int) (Math.random() * (Constants.WIDTH - Constants.BLOCK_SIZE));
-        rect.y = (int) (Math.random() * (Constants.HEIGHT - Constants.BLOCK_SIZE));
+        rect.x = (int) (Math.random() * (Constants.F_WIDTH - Constants.BLOCK_SIZE));
+        rect.y = (int) (Math.random() * (Constants.F_HEIGHT - Constants.BLOCK_SIZE)) ;
         rect.w = (int) Constants.BLOCK_SIZE;
         rect.h = (int) Constants.BLOCK_SIZE;
 
     }
     public void draw(Graphics2D g2d) {
-        g2d.drawImage(icon,(int) rect.x+5,(int) rect.y+5,(int) rect.w, (int) rect.h, null);
+        g2d.drawImage(icon,(int) rect.x ,(int) rect.y,(int) rect.w, (int) rect.h, null);
     }
 
     public void dispose(Graphics2D g2d) {

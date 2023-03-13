@@ -63,12 +63,7 @@ public class Snake {
             newY = foreground.y;
         }
 
-        for (int i = 0; i < body.length; i++) {
-            if (body[i] != null && body[i].x == newX && body[i].y == newY) {
-                System.out.println("You lose");
-                Window.changeScene(2);
-            }
-        }
+
 
         body[(head + 1) % body.length] = body[tail];
         body[tail] = null;
@@ -77,6 +72,12 @@ public class Snake {
 
         body[head].x = newX;
         body[head].y = newY;
+        for (int i = 0; i < body.length; i++) {
+            if (body[i] != null && body[i].x == newX && body[i].y == newY && i != head) {
+                System.out.println("You lose");
+                Window.changeScene(2);
+            }
+        }
 
     }
     public void changeDirection(Direction direction) {
