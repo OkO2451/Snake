@@ -17,8 +17,8 @@ public class Fruit {
         spawn();
     }
     public void spawn() {
-        rect.x = (int) (Math.random() * (Constants.F_WIDTH - Constants.BLOCK_SIZE));
-        rect.y = (int) (Math.random() * (Constants.F_HEIGHT - Constants.BLOCK_SIZE)) ;
+        rect.x = (int) (Math.random() * (Constants.F_WIDTH - 2*Constants.BLOCK_SIZE)) + Constants.BLOCK_SIZE;
+        rect.y = (int) (Math.random() * (Constants.F_HEIGHT - 2*Constants.BLOCK_SIZE)) + Constants.BLOCK_SIZE;
         rect.w = (int) Constants.BLOCK_SIZE;
         rect.h = (int) Constants.BLOCK_SIZE;
 

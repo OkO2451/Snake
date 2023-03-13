@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68d0432e-3ce0-4b17-aae7-7042ffd3f028" name="Changes" comment="added fruits&#10;&#10;TODO:&#10; - score tracker&#10; - growing&#10; - online">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Fruit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Fruit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GameScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GameScene.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Snake.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Snake.java" afterDir="false" />
-    </list>
+    <list default="true" id="68d0432e-3ce0-4b17-aae7-7042ffd3f028" name="Changes" comment="it grows&#10;&#10;TODO:&#10; - score tracker&#10; - online" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -97,6 +91,7 @@
       <workItem from="1678612312899" duration="1361000" />
       <workItem from="1678639759569" duration="4457000" />
       <workItem from="1678658101566" duration="6584000" />
+      <workItem from="1678695414646" duration="259000" />
     </task>
     <task id="LOCAL-00001" summary="lkhmis">
       <created>1678385185705</created>

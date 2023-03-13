@@ -3,7 +3,7 @@ import java.awt.event.KeyEvent;
 import java.awt.geom.Rectangle2D;
 
 public class Snake {
-    public Rect[] body = new Rect[30];
+    public Rect[] body = new Rect[Constants.SNACK_SIZE];
     public double bodyWidth, bodyHeight;
 
     public int size;

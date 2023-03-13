@@ -62,5 +62,9 @@ public class GameScene extends Scene{
 
         fruit.dispose(g2d);
         fruit.draw(g2d);
+        // code to draw the score
+        g2d.setColor(Color.RED);
+        g2d.setFont(new Font("Arial", Font.BOLD, 12));
+        g2d.drawString("Score: " + score, 12, 588);
     }
 }
