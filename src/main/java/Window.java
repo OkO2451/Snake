@@ -7,6 +7,8 @@ public class Window extends JFrame implements Runnable {
     private static Scene currentScene;
     private static int currentState;
     private static Ml mouseListener = new Ml();
+    private GameClient socketClient;
+    private Server socketServer;
     static Kl keyListener = new Kl();
 
     private Window(int width, int height, String title) {
@@ -24,9 +26,11 @@ public class Window extends JFrame implements Runnable {
     }
 
     public static synchronized Window getInstance() {
+
         if (window == null) {
             window = new Window(Constants.WIDTH, Constants.HEIGHT, "Game");
         }
+
         return window;
     }
 

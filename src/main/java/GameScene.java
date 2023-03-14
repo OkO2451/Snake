@@ -8,6 +8,7 @@ public class GameScene extends Scene{
     public static boolean PAUSE = false;
     public Fruit fruit;
     Rect foreground, background;
+
     public Kl keyListener ;
     public Ml mouseListener;
     public GameScene(Kl keyListener, Ml mouseListener) {
@@ -76,8 +77,16 @@ public class GameScene extends Scene{
         if (snake.body[snake.head].contains(fruit.rect) || snake.body[snake.tail].contains(fruit.rect.x + 24, fruit.rect.y + 24)) {
             snake.grow();
             score++;
-
             fruit.spawn();
+        }
+
+        if( keyListener.isPressed(KeyEvent.VK_SPACE)){
+            try {
+                fruit.spawn();
+                Thread.sleep(500);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
 
         snake.update(dt);
@@ -105,6 +114,6 @@ public class GameScene extends Scene{
         s = PAUSE ? "Press P to resume" : s;
         g2d.setColor(Color.RED);
         g2d.setFont(new Font("Arial", Font.BOLD, 12));
-        g2d.drawString(s, 12+60, 588);
+        g2d.drawString(s, 12+320, 588);
     }
 }
