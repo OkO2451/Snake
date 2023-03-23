@@ -9,7 +9,7 @@ public class Fruit {
     public Fruit() {
         rect = new Rect();
         try {
-            BufferedImage spritesheet = ImageIO.read(new File("Assets/fruit.jpg"));
+            BufferedImage spritesheet = ImageIO.read(new File("Assets/fruit.png"));
             icon = spritesheet.getSubimage(0, 0, 96, 98);
         }catch (Exception e) {
             e.printStackTrace();

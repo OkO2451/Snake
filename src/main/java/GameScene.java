@@ -5,8 +5,10 @@ import java.awt.geom.Rectangle2D;
 public class GameScene extends Scene{
     int score ;
     public Snake snake;
+    public static boolean PAUSE = false;
     public Fruit fruit;
     Rect foreground, background;
+
     public Kl keyListener ;
     public Ml mouseListener;
     public GameScene(Kl keyListener, Ml mouseListener) {
@@ -19,6 +21,19 @@ public class GameScene extends Scene{
         fruit = new Fruit();
     }
     public void update(double dt) {
+        if(keyListener.isPressed(KeyEvent.VK_P)){
+            PAUSE = !PAUSE;
+            //time sleep for half a second
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+        if (PAUSE) {
+            return;
+        }
+
         if(keyListener.isPressed(KeyEvent.VK_2)){
             Window.changeScene(0);
         } else if (keyListener.isPressed(KeyEvent.VK_1)) {
@@ -27,23 +42,51 @@ public class GameScene extends Scene{
         if (Window.keyListener.isPressed(KeyEvent.VK_UP)) {
             if(snake.direction != Direction.DOWN)
                 snake.changeDirection(Direction.UP);
+            try {
+                Thread.sleep(20);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         } else if (Window.keyListener.isPressed(KeyEvent.VK_DOWN)) {
             if(snake.direction != Direction.UP)
                 snake.changeDirection(Direction.DOWN);
+            try {
+                Thread.sleep(20);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
 
         } else if (Window.keyListener.isPressed(KeyEvent.VK_LEFT)) {
             if(snake.direction != Direction.RIGHT)
                 snake.changeDirection(Direction.LEFT);
+            try {
+                Thread.sleep(20);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         } else if (Window.keyListener.isPressed(KeyEvent.VK_RIGHT)) {
             if(snake.direction != Direction.LEFT)
                 snake.changeDirection(Direction.RIGHT);
+            try {
+                Thread.sleep(20);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
 
         if (snake.body[snake.head].contains(fruit.rect) || snake.body[snake.tail].contains(fruit.rect.x + 24, fruit.rect.y + 24)) {
             snake.grow();
             score++;
-
             fruit.spawn();
+        }
+
+        if( keyListener.isPressed(KeyEvent.VK_SPACE)){
+            try {
+                fruit.spawn();
+                Thread.sleep(500);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
 
         snake.update(dt);
@@ -66,5 +109,11 @@ public class GameScene extends Scene{
         g2d.setColor(Color.RED);
         g2d.setFont(new Font("Arial", Font.BOLD, 12));
         g2d.drawString("Score: " + score, 12, 588);
+
+        String s = "Press P to pause";
+        s = PAUSE ? "Press P to resume" : s;
+        g2d.setColor(Color.RED);
+        g2d.setFont(new Font("Arial", Font.BOLD, 12));
+        g2d.drawString(s, 12+320, 588);
     }
 }
