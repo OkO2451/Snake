@@ -9,5 +9,6 @@ public class Constants {
     public static final int SNAKE_SPEED = 20;
     public static final int FRUIT_SIZE = 20;
     public static final int SNACK_SIZE = 200;
+    public static final int OBSTACLE_SIZE = 4;
 
 }

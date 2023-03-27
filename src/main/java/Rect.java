@@ -5,6 +5,8 @@ public class Rect {
         this.y = y;
         this.w = w;
         this.h = h;
+        // yes
+        // indeed
     }
     public Rect() {
         this(0, 0, 0, 0);

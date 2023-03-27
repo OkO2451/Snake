@@ -121,7 +121,7 @@ public class Snake {
             this.size = size;
         }
         this.bodyWidth = bodyWidth;
-        this.bodyHeight = bodyHeight;
+    this.bodyHeight = bodyHeight;
         this.background = background;
         this.foreground = foreground;
 
@@ -155,5 +155,5 @@ public class Snake {
         g2.fill(new Rectangle2D.Double(body[head].x + 4.0 + subWidth, body[head].y + 2.0, subWidth, subHeight));
         g2.fill(new Rectangle2D.Double(body[head].x + 2.0, body[head].y + 4.0 + subHeight, subWidth, subHeight));
         g2.fill(new Rectangle2D.Double(body[head].x + 4.0 + subWidth, body[head].y + 4.0 + subHeight, subWidth, subHeight));
-       }
+    }
 }
