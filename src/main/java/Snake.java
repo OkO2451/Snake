@@ -156,4 +156,6 @@ public class Snake {
         g2.fill(new Rectangle2D.Double(body[head].x + 2.0, body[head].y + 4.0 + subHeight, subWidth, subHeight));
         g2.fill(new Rectangle2D.Double(body[head].x + 4.0 + subWidth, body[head].y + 4.0 + subHeight, subWidth, subHeight));
     }
+
+    
 }
